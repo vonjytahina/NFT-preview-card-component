@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --primary-soft-blue: hsl(215, 51%, 70%);
+  --primary-cyan: hsl(178, 100%, 50%);
+
+  --neutral-very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --neutral-very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --neutral-very-dark-blue-line: hsl(215, 32%, 27%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+}
+
+.container {
+  width: 1440px;
+  height: auto;
+  margin: 0px auto;
+  background: var(--neutral-very-dark-blue-main-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-soft-blue);
+}
+
+.attribution {
+  margin: 15px auto 5px;
+}
+
+.attribution a {
+  font-size: 11px;
+}
+
+.app {
+  width: 350px;
+  height: auto;
+  padding: 20px;
+  background: var(--neutral-very-dark-blue-card-bg);
+  margin: 50px 0px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.app .img {
+  border-bottom-left-radius: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.app .img img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.app .img .vignet {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 98%;
+  background: rgba(0, 255, 247, 0);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+}
+
+.app .img:hover .vignet {
+  background: rgba(0, 255, 247, .5);
+}
+
+.app .img .vignet img{
+  transform: scale(.2);
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+.app .img:hover .vignet img{
+  opacity: 1;
+}
+
+.app h4 {
+  color: var(--neutral-white);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.app h4:hover {
+  color: var(--primary-cyan);
+}
+
+.app p {
+  font-weight: 300;
+}
+
+.app .details {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.app .details .left, .app .details .right {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.app .details .left {
+  color: var(--primary-cyan);
+}
+
+.app .line {
+  width: 100%;
+  height: 1px;
+  background: var(--neutral-very-dark-blue-line);
+  margin-bottom: 20px;
+}
+
+.app .author {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.app .author .avatar {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--neutral-white);
+  border-radius: 50%;
+}
+
+.app .author .avatar img{
+  width: 100%;
+}
+
+.app .author .name {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.app .author .name span {
+  font-size: 15px;
+  color: var(--neutral-white);
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  margin-left: 2px;
+}
+
+.app .author .name span:hover {
+  color: var(--primary-cyan);
+}
+
+/* responsive */
+@media screen and (max-width: 375px) {
+  .container {
+    width: 375px;
+    height: auto;
+    border: none;
+    overflow: hidden;
+  }
+
+  .app {
+    width: 340px;
+  }
+}
